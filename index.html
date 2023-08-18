@@ -77,7 +77,6 @@
                         <h3>Mahesh Herle</h3>
                         <p class="w3-opacity">CEO & Founder</p>
                         <p>Over 17 years of experince in tech industry and more than 10 years in logistics</p>
-                        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
                     </div>
                 </div>
             </div>
@@ -88,7 +87,6 @@
                         <h3>Poornima Aithal</h3>
                         <p class="w3-opacity">Founder & Tech Consultant</p>
                         <p>Over 15 years of experince in tech industry building products. Ex Microsoft, Ex Adobe</p>
-                        <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
                     </div>
                 </div>
             </div>
@@ -118,38 +116,14 @@
                 <label>Message</label>
                 <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
             </div>
-            <button type="submit" class="w3-button w3-block w3-black">Send</button>
+            <button id="sendbutton" class="w3-button w3-block w3-black" onclick="myFunction()">Send</button>
         </form>
 
     </div>
 
     <script>
-        // Slideshow
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demodots");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length };
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" w3-white", "");
-            }
-            x[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " w3-white";
+        function myFunction() {
+            document.getElementById("sendbutton").innerHTML = "Hello World";
         }
     </script>
 
