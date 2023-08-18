@@ -31,6 +31,24 @@
         padding: 0;
         margin-top: 6px
     }
+
+    .float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 130px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
+
+    .my-float {
+        margin-top: 16px;
+    }
 </style>
 
 <body>
@@ -94,36 +112,17 @@
 
         <!-- Contact -->
         <div class="w3-center w3-padding-64" id="contact">
-            <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+            <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us </span>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+            <a href="https://api.whatsapp.com/send?phone=9900163002&text=Hello I need more info about your Logistics TSP"
+                class="float" target="_blank">
+                <i class="fa fa-whatsapp my-float"></i>
+            </a>
         </div>
-
-        <form class="w3-container" action="/action_page.php" target="_blank">
-            <div class="w3-section">
-                <label>Name</label>
-                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name"
-                    required>
-            </div>
-            <div class="w3-section">
-                <label>Email</label>
-                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email"
-                    required>
-            </div>
-            <div class="w3-section">
-                <label>Subject</label>
-                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
-            </div>
-            <div class="w3-section">
-                <label>Message</label>
-                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
-            </div>
-            <button id="sendbutton" class="w3-button w3-block w3-black" onclick="myFunction()">Send</button>
-        </form>
-
     </div>
 
     <script>
         function myFunction() {
-            document.getElementById("sendbutton").innerHTML = "Hello World";
         }
     </script>
 
